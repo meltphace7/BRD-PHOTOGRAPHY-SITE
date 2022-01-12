@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Brock Dallman Photography/Cart</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="resources/style.css" />
+    <link rel="stylesheet" href="resources/queries.css" />
+    <script src="cart.js" defer></script>
+    <script src="mobile.js" defer></script>
+  </head>
+  <body class="cart-body">
+    <nav class="nav nav-cart">
+      <div class="logo-container">
+        <div class="line line-1"></div>
+        <div class="logo">
+          <img src="resources/img/BDLOGO-white.png" />
+          <p>BROCK DALLMAN PHOTOGRAPHY</p>
+        </div>
+        <div class="line line-2"></div>
+      </div>
+      <div class="nav-line">
+        <div class="blank"></div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+            <ul class="dropdown-menu">
+              <li><a href="washington.html">Washington</a></li>
+              <li><a href="oregon.html">Oregon</a></li>
+              <li><a href="california.html">California</a></li>
+              <li><a href="idaho.html">Idaho</a></li>
+              <li><a href="montana.html">Montana</a></li>
+              <li><a href="wyoming.html">Wyoming</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icon-container">
+          <div class="cart-container">
+            <a class="cart-link" href="cart.html">
+              <ion-icon name="cart"></ion-icon>
+              <div class="cart-item-count">0</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-nav">
+      <div class="mobile-nav-main">
+        <div class="mobile-nav-logo">
+          <img src="resources/img/BDLOGO-white.png" />
+          <a href="index.html"><p>BROCK DALLMAN PHOTOGRAPHY</p></a>
+        </div>
+        <div class="nav-icon-container">
+          <div class="cart-container">
+            <a class="mobile-cart-link" href="cart.html">
+              <ion-icon name="cart"></ion-icon>
+              <div class="mobile-cart-item-count">0</div>
+            </a>
+          </div>
+          <div class="hamburger-menu">
+            <div class="hamburger-stripe"></div>
+            <div class="hamburger-stripe"></div>
+            <div class="hamburger-stripe"></div>
+          </div>
+        </div>
+      </div>
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <section class="cart">
+      <h1 class="cart-title">Your Cart</h1>
+      <div class="cart-container">
+        <div class="cart-grid">
+          <h1>Your cart is empty</h1>
+          <!----- RENDER CART ITEM HERE ------------------>
+          <!--  
+          <div class="cart-item">
+            <div class="cart-image-container">
+              <img
+                class="cart-item-image"
+                src="resources/img-lowRes/CA-EDIZALakePano-lowRes1.jpg"
+              />
+              <button class="remove-btn">x</button>
+            </div>
+            <div class="cart-item-stats">
+            <h3 class="cart-item-text cart-item-name">Ediza</h3>
+            <p class="cart-item-text cart-item-price">$1200</p>
+            <p class="cart-item-text cart-item-unit">1</p>
+            <p class="cart-item-text cart-item-total-price">$1200</p>
+            </div
+          </div>
+      -->
+        </div>
+        <div class="cart-total-container">
+          <div class="total-container">
+            <h3 class="total-items-field">Items: 0</h3>
+            <h1 class="total-price-field">TOTAL: $ 0.00</h1>
+            <button class="checkout-btn">CHECKOUT</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer cart-footer">
+      <div class="footer-logo-container">
+        <img class="footer-logo" src="resources/img/BDLOGO-white.png" />
+        <p>BROCK DALLMAN PHOTOGRAPHY 2022 <br> ALL RIGHTS RESERVED</p>
+      </div>
+      <div class="social">
+        <a><img src="resources/img/logo-facebook.svg" /></a>
+        <a><img src="resources/img/logo-instagram (1).svg" /></a>
+        <a><img src="resources/img/logo-reddit.svg" /></a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,2048 @@
+:root {
+  --color-primary: rgb(161, 218, 48);
+  --color-secondary: rgb(60, 215, 60);
+  --color-tertiary: rgb(134, 187, 56);
+  --color-dark-1: #141515;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button {
+  font-family: "Barlow", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+/*______________ NAVIGATION _____________________*/
+
+nav {
+  width: 100%;
+  height: 7rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.nav-line {
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 30%;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.logo img {
+  height: 3rem;
+  margin-right: 0.3rem;
+}
+
+.line {
+  width: 28%;
+  border-bottom: 1px solid white;
+}
+
+.line-1 {
+  animation: move 2000ms ease-in-out forwards;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.line-2 {
+  animation: move2 2000ms ease-in-out forwards;
+}
+
+@keyframes move2 {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.blank {
+  width: 5rem;
+}
+
+.nav-menu {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-menu li {
+  padding: 0.5rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 150ms ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: black;
+  border-radius: 5px;
+  animation: drop 400ms ease-in-out forwards;
+  z-index: 9999;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 18rem;
+  }
+}
+
+.dropdown-menu li {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.nav-menu li:hover .dropdown-menu {
+  display: block;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.75rem;
+}
+
+.cart-item-count {
+  height: 1.3rem;
+  width: 1.3rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-icon {
+  font-size: 23px;
+}
+
+/* ______ STICKY NAV ____________*/
+
+.sticky {
+  position: fixed;
+}
+
+.mobile-nav-logo img {
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.mobile-nav-logo {
+  margin-left: 1rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-nav-main {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav {
+  z-index: 999;
+  width: 100%;
+  height: 3.5rem;
+  background-color: black;
+  color: white;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1s ease-in-out;
+}
+
+.mobile-nav p {
+  font-size: 0.85rem;
+}
+
+.mobile-nav-menu {
+  z-index: 9999;
+  background-color: black;
+  padding: 0.75rem;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  animation: nvdrop 1s ease-in-out forwards;
+}
+
+@keyframes nvdrop {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+
+  100% {
+    height: 6rem;
+    opacity: 1;
+  }
+}
+
+.mobile-nav-menu a {
+  padding: 1rem;
+}
+
+.mobile-nav--hide {
+  display: none;
+}
+
+.mobile-cart-item-count {
+  height: 1.3rem;
+  width: 1.3rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-cart-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu {
+  width: 1.5rem;
+  height: 1.2rem;
+  padding: 0.2rem;
+  margin-right: 1rem;
+  z-index: 111;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger-stripe {
+  width: 100%;
+  height: 0.19rem;
+  z-index: 999;
+  background-color: white;
+}
+
+.hamburger-menu:hover {
+  cursor: pointer;
+}
+
+/* _______ HEADER ______________________*/
+
+header {
+  width: 100%;
+  height: 100vh;
+}
+
+/* _______ HEADER - SLIDER COMPONENT ______________________*/
+
+.header-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 110vh;
+}
+
+.header-slider {
+  width: 100%;
+  height: 87vh;
+  background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-slide {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+}
+
+.header-slide-1 {
+  background-image: url(img/CA_EDIZA-LAKE_PANO_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.header-slide-2 {
+  background-image: url(img/WA_St.HELENS_SUNRISE_lowRes5.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.header-slide-3 {
+  background-image: url(img/WY_ISLAND-LAKE-DAWN_lowRes.jpg);
+  background-size: cover;
+  background-position: 60% 50%;
+}
+
+.header-slide-4 {
+  background-image: url(img/MO_HIDDEN-LAKE_lowRes.jpg);
+  background-size: cover;
+  background-position: 60% 50%;
+}
+
+.header-slide-5 {
+  background-image: url(img/OR_FRAZIER-LAKE_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.header-slide-6 {
+  background-image: url(img/ID_LOST-RIVER-RANGE_lowRes.jpg);
+  background-size: cover;
+  background-position: 60% 50%;
+}
+
+.header-slide-7 {
+  background-image: url(img/WA_RAINER-PINK_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.header-slide-8 {
+  background-image: url(img/OR_GLACIER-LAKE_PANO_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.header-slide-9 {
+  background-image: url(img/OR_OLALLIE-BUTTE_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.header-slide-10 {
+  background-image: url(img/WA_BIGHEART_LAKE_lowRes2.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.header-slide--active {
+  animation: fade 2s ease-in-out forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.visible {
+  opacity: 1;
+}
+
+.header-slider-control-container {
+  height: 4rem;
+  display: flex;
+  opacity: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  transition: 1s ease-in-out;
+}
+
+.header-slider-btn {
+  height: 2.3rem;
+  width: 6rem;
+  border: 1px solid black;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.header-slider-btn-right {
+  margin-left: 1.5rem;
+}
+
+.header-slider-btn-left {
+  margin-right: 1.5rem;
+}
+
+.header-slider-btn:hover {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: black;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dot {
+  height: 1rem;
+  width: 1rem;
+  margin: 0.25rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: rgb(199, 199, 199);
+}
+
+.dot:hover {
+  border: 1px solid var(--color-primary);
+}
+
+.dot--active {
+  background-color: var(--color-primary);
+}
+
+/* _______ SECTIONS ______________________*/
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+/*________ SECTION-1 NEW ARRIVALS ________________*/
+
+.section-1 {
+  width: 100%;
+  height: 50rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-arrivals {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.na-text-box {
+  width: 30%;
+  display: block;
+  padding-right: 1rem;
+}
+
+.na-text-box h1 {
+  margin: 0.3rem 0rem 1rem 0rem;
+  color: var(--color-secondary);
+}
+
+.na-text-box p {
+  margin-bottom: 4rem;
+}
+
+.na-image {
+  width: 70%;
+  height: 37rem;
+  background-image: url(img/CA-GannetLakePano-699kb-lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.button {
+  color: black;
+  border: 1px solid black;
+  padding: 0.7rem 1.5rem;
+}
+
+.button:hover {
+  animation: buttFade 150ms ease-in-out forwards;
+}
+
+@keyframes buttFade {
+  0% {
+    border: 1px solid black;
+    background-color: none;
+  }
+
+  100% {
+    border: 1px solid var(--color-secondary);
+    background-color: rgba(0, 0, 0, 0.868);
+  }
+}
+
+/*_______________ SECTION-2 GALLERIES ______________*/
+
+.section-2 {
+  width: 100%;
+  height: 50rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleries {
+  width: 95%;
+  height: 37rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(img/CA-Iceberg-Lake-538KB_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 20%;
+}
+
+.g-text-box {
+  width: 30%;
+  display: block;
+  position: relative;
+  top: 2rem;
+  padding-left: 7.5rem;
+}
+
+.g-text-box h1 {
+  margin: 0.3rem 0rem 1rem 0rem;
+  color: var(--color-secondary);
+}
+
+.g-text-box h3 {
+  color: white;
+}
+
+.g-text-box p {
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.button-2 {
+  color: white;
+  border: 1px solid white;
+  padding: 0.7rem 1.5rem;
+}
+
+.button-2:hover {
+  animation: butt 150ms ease-in-out forwards;
+}
+
+@keyframes butt {
+  0% {
+    border: 1px solid white;
+    background-color: none;
+  }
+
+  100% {
+    border: 1px solid var(--color-secondary);
+    background-color: rgba(0, 0, 0, 0.868);
+  }
+}
+
+/*_____________ SECTION-3 PRINTS ________________*/
+
+.section-3 {
+  width: 100%;
+  height: 50rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prints {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pr-text-box {
+  width: 30%;
+  display: block;
+  padding-right: 1rem;
+}
+
+.pr-text-box h1 {
+  margin: 0.3rem 0rem 1rem 0rem;
+  color: var(--color-secondary);
+}
+
+.pr-text-box p {
+  margin-bottom: 4rem;
+}
+
+.pr-image {
+  width: 70%;
+  height: 30rem;
+  background-image: url(img/WA_SPECTACLE-LAKE_PANO_lowRes.jpg);
+  background-size: cover;
+  background-position: 30% 50%;
+}
+
+/*__________ SECTION-4 GALLERY GRID _______________*/
+
+.section-4 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-grid {
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(13 1fr);
+  grid-template-rows: repeat(13 1fr);
+  grid-gap: 0.5rem;
+}
+
+.gal-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 40rem;
+  background-image: url(img/CA-ThousandIsland-Lake-671KB_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 40rem;
+  background-image: url(img/WA_RAINER-PINK_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-3 {
+  grid-column-start: 7;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 40rem;
+  background-image: url(img/ID_MCGOWAN-PEAK_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-image: url(img/MO_OLLIE-SUNSET_VERT__lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-5 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-image: url(img/WA_RAINIER-EAST-VERT_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-6 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  height: 45rem;
+  background-image: url(img/ID_ALICE_VERT_lowRes-1.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-7 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-image: url(img/WA_RAINIER-EAST-VERT_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.gal-grid-item-8 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  background-image: url(img/WY_FREMONT-PEAK-VERT_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.gal-grid-item-9 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  height: 40rem;
+  background-image: url(img/WY_ISLAND-LAKE-DAWN_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-10 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  height: 40rem;
+  background-image: url(img/WA_GOAT-ROCKS_olSNOWY_pano_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-11 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  height: 40rem;
+  background-image: url(img/WA_RANIER_WEST-PANO_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-12 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  height: 40rem;
+  background-image: url(img/ID_TWIN-LAKE_VERT_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-13 {
+  grid-column-start: 6;
+  grid-column-end: 13;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  height: 40rem;
+  background-image: url(img/WA_BIGHEART_LAKE_lowRes2.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gal-grid-item-14 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 11;
+  height: 40rem;
+  background-image: url(img/WA_GLACIER-PEAK-PANO_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/*__________ PORTFOLIO _______________*/
+
+.portfolio {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+.portfolio-grid {
+  width: 75%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(13 1fr);
+}
+
+.port-text {
+  color: white;
+}
+
+.port-grid-item {
+  height: 27rem;
+  display: flex;
+  background-color: grey;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.port-grid-item:hover .port-text {
+  color: rgb(134, 187, 56);
+}
+
+.port-text-container {
+  width: 100%;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.portfolio-grid a:hover {
+  color: var(--color-primary);
+}
+
+.port-grid-img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.port-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.port-grid-img-1 {
+  background-image: url(img/WA_RAINIER-EAST-VERT_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.port-grid-item-2 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.port-grid-img-2 {
+  background-image: url(img/OR_OLALLIE-BUTTE_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.port-grid-item-3 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.port-grid-img-3 {
+  background-image: url(img/CA-ThousandIsland-Lake-671KB_lowRes.jpg);
+  background-size: cover;
+  background-position: 55% 50%;
+}
+
+.port-grid-item-4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.port-grid-img-4 {
+  background-image: url(img/ID_ALICE_VERT_lowRes-1.jpg);
+  background-size: cover;
+  background-position: 50% 62%;
+}
+
+.port-grid-item-5 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.port-grid-img-5 {
+  background-image: url(img/WY_FREMONT_CROP_lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 75%;
+}
+
+.port-grid-item-6 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.port-grid-img-6 {
+  background-image: url(img/MO_OLLIE-SUNSET_VERT__lowRes.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+/*__________STATE-TITLE _______________*/
+
+.state-title {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.state {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*____________ WASHINGTON.HTML _________________*/
+
+.wa-grid {
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(13 1fr);
+  grid-gap: 0.5rem;
+}
+
+.wa-grid-item {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wa-grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.wa-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.wa-grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.wa-grid-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.wa-grid-item-4 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.wa-grid-item-5 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.wa-grid-item-6 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.wa-grid-item-7 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.wa-grid-item-8 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+.wa-grid-item-9 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+
+.wa-grid-item-10 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+.wa-grid-item-11 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 12;
+  grid-row-end: 13;
+}
+
+.wa-grid-item-12 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 13;
+  grid-row-end: 14;
+}
+
+.wa-grid-item-13 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 14;
+  grid-row-end: 15;
+}
+
+.wa-grid-item-14 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 15;
+  grid-row-end: 16;
+}
+
+.wa-grid-item-15 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 16;
+  grid-row-end: 17;
+}
+
+.wa-grid-item-16 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 17;
+  grid-row-end: 18;
+}
+
+/*________________ OREGON.HTML __________________________*/
+
+.or-grid {
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(13 1fr);
+  grid-template-rows: repeat(12 1fr);
+  grid-gap: 0.5rem;
+}
+
+.or-grid-item {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.or-grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.or-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.or-grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.or-grid-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.or-grid-item-4 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.or-grid-item-5 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.or-grid-item-6 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.or-grid-item-7 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.or-grid-item-8 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+.or-grid-item-9 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+
+.or-grid-item-10 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+/*______________ CALIFORNIA.HTML ___________________________*/
+
+.ca-grid {
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(13 1fr);
+  grid-template-rows: repeat(12 1fr);
+  grid-gap: 0.5rem;
+}
+
+.ca-grid-item {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ca-grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.ca-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.ca-grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.ca-grid-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.ca-grid-item-4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.ca-grid-item-5 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.ca-grid-item-6 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.ca-grid-item-7 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.ca-grid-item-8 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.ca-grid-item-9 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.ca-grid-item-10 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+/*_______________ IDAHO.HTML _________________________*/
+
+.id-grid {
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(13 1fr);
+  grid-template-rows: repeat(12 1fr);
+  grid-gap: 0.5rem;
+}
+.id-grid-item {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.id-grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.id-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.id-grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.id-grid-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.id-grid-item-4 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.id-grid-item-5 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.id-grid-item-6 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.id-grid-item-7 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.id-grid-item-8 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+.id-grid-item-9 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+.id-grid-item-10 {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+.id-grid-item-11 {
+  grid-column-start: 8;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+/*______________ MONTANA.HTML ________________________*/
+
+.mo-grid {
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(13 1fr);
+  grid-template-rows: repeat(12 1fr);
+  grid-gap: 0.5rem;
+}
+
+.mo-grid-item {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mo-grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.mo-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.mo-grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.mo-grid-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.mo-grid-item-4 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.mo-grid-item-5 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.mo-grid-item-6 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.mo-grid-item-7 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.mo-grid-item-8 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.mo-grid-item-9 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.mo-grid-item-10 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+/*___________  WYOMING.HTML ______________________________*/
+
+.wy-grid {
+  width: 98%;
+  display: grid;
+  grid-template-columns: repeat(13 1fr);
+  grid-template-rows: repeat(12 1fr);
+  grid-gap: 0.5rem;
+}
+
+.wy-grid-item {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wy-grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.wy-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.wy-grid-item-2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.wy-grid-item-3 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.wy-grid-item-4 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.wy-grid-item-5 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.wy-grid-item-6 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.wy-grid-item-7 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.wy-grid-item-8 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+.wy-grid-item-9 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 9;
+  grid-row-end: 10;
+}
+
+.wy-grid-item-10 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+/*_________________ ABOUT.HTML ___________________*/
+
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-box {
+  width: 100%;
+  height: 40rem;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(241, 238, 228);
+}
+
+.bio-text-box {
+  width: 35%;
+  display: block;
+  margin-right: 3rem;
+}
+
+.bio-text-box h1 {
+  font-size: 2.5rem;
+  color: rgb(134, 187, 56);
+}
+
+.bio-text-box p {
+  margin-top: 3rem;
+}
+
+.bio-image {
+  width: auto;
+  height: 40rem;
+}
+
+/*___________ SHOP.HTML ______________________________*/
+
+.store {
+  width: 100%;
+  background-color: rgb(241, 238, 228);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.store h1 {
+  text-align: center;
+  color: black;
+  margin: 3rem;
+}
+
+.go-to-cart-link {
+  color: black;
+  margin-left: auto;
+  margin-right: 3rem;
+}
+
+.print-grid {
+  width: 95%;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.print-text-box {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ptb-1 {
+  font-size: 1.3rem;
+}
+
+.ptb-2 {
+  font-size: 1rem;
+}
+
+.ptb-3 {
+  font-size: 1.5rem;
+  color: rgb(60, 215, 60);
+}
+
+.print-grid-item {
+  width: 20rem;
+  height: 25rem;
+  padding: 2rem;
+  background-color: rgb(63, 63, 63);
+  color: white;
+  display: flex;
+  border-radius: 7px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.add-to-cart-btn {
+  margin-top: 1rem;
+  border: 1px solid white;
+  background-color: rgb(72, 70, 70);
+  color: white;
+  padding: 0.7rem 1.7rem;
+}
+
+.add-to-cart-btn:hover {
+  background-color: black;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  transition: 0.3s ease-in-out;
+}
+
+.sold-out {
+  color: red;
+  border: 1px solid red;
+}
+
+.print-grid-item img {
+  width: 20rem;
+  height: auto;
+}
+
+/*______________ CART.HTML _______________________________*/
+
+.cart-body {
+  background-color: rgb(241, 238, 228);
+}
+
+.cart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.cart-title {
+  margin-top: 2rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+
+.cart-empty {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.cart-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.cart-total-container {
+  width: 35%;
+  height: 30rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(55, 55, 55);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-container {
+  margin-right: 12rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-btn {
+  width: 12rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  border: 1px solid var(--color-secondary);
+  margin-top: 3rem;
+  background-color: white;
+  color: black;
+}
+
+.checkout-btn:hover {
+  background-color: black;
+  color: var(--color-primary);
+  transition: 0.2s ease-in;
+}
+
+.cart-grid {
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  gap: 0.2rem;
+  grid-template-rows: repeat(1fr);
+}
+
+.cart-item {
+  width: 90%;
+  height: 6rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  padding: 2rem;
+  border-radius: 2px;
+  background-color: rgb(136, 136, 136);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-image {
+  width: 12rem;
+  border: 8px solid white;
+}
+
+.cart-item-stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.remove-btn {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-btn:hover {
+  background-color: red;
+  transition: 0.3s ease-in-out;
+}
+
+.cart-image-container .cart-item-text {
+  font-size: 1.2rem;
+}
+
+.unit-container {
+  width: 5rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unit-control {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+}
+
+.cart-footer {
+  margin-top: 20rem;
+}
+
+/*_________ CONTACT.HTML __________________________*/
+.contact-title {
+  font-size: 3rem;
+}
+
+.contact-email {
+  color: white;
+}
+
+.contact {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(img/WA_RAINER-PINK_lowRes.jpg);
+  background-size: cover;
+}
+
+.contact h1 {
+  color: white;
+  text-align: center;
+  margin: 2rem;
+}
+
+form {
+  background-color: rgba(5, 5, 5, 0.608);
+  color: white;
+  border-radius: 5px;
+  width: 50%;
+  height: 33rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-text {
+  color: black;
+}
+
+.name-row {
+  width: 100%;
+  flex-direction: column;
+}
+
+input {
+  color: white;
+}
+
+#first-name {
+  width: 30%;
+}
+
+#last-name {
+  width: 60%;
+}
+
+#email {
+  width: 40%;
+}
+
+#subject {
+  width: 75%;
+}
+
+#message {
+  width: 100%;
+  height: 15rem;
+}
+
+.submit-button {
+  width: 100%;
+  height: 15rem;
+  margin-top: 2rem;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.submit-button:hover {
+  background-color: black;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  transition: 0.3s ease-in-out;
+}
+
+.form-status {
+  width: 25rem;
+  height: 13rem;
+  padding: 1rem;
+  margin: 2rem;
+  opacity: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.form-status-success {
+  border: 1px solid var(--color-secondary);
+  animation: statusMSG 10s ease-in-out forwards;
+}
+
+.form-status-error {
+  border: 1px solid red;
+  animation: statusMSG 10s ease-in-out forwards;
+}
+
+@keyframes statusMSG {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/*______________ FOOTER ________________-*/
+
+footer {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.footer-logo-container {
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 3rem;
+}
+
+footer p {
+  margin-left: 0.3rem;
+}
+
+.social {
+  width: 12%;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social img {
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.social a:hover img {
+  background-color: var(--color-secondary);
+}

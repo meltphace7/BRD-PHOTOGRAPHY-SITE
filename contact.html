@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Brock Dallman Photography/Contact</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="resources/style.css" />
+    <link rel="stylesheet" href="resources/queries.css" />
+    <script src="cartLoad.js" defer></script>
+    <script src="contact.js" defer></script>
+    <script src="mobile.js" defer></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo-container">
+        <div class="line line-1"></div>
+        <div class="logo">
+          <img src="resources/img/BDLOGO-white.png" />
+          <p>BROCK DALLMAN PHOTOGRAPHY</p>
+        </div>
+        <div class="line line-2"></div>
+      </div>
+      <div class="nav-line">
+        <div class="blank"></div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+            <ul class="dropdown-menu">
+              <li><a href="washington.html">Washington</a></li>
+              <li><a href="oregon.html">Oregon</a></li>
+              <li><a href="california.html">California</a></li>
+              <li><a href="idaho.html">Idaho</a></li>
+              <li><a href="montana.html">Montana</a></li>
+              <li><a href="wyoming.html">Wyoming</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icon-container">
+          <div class="cart-container">
+            <a class="cart-link" href="cart.html">
+              <ion-icon name="cart"></ion-icon>
+              <div class="cart-item-count">0</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-nav">
+      <div class="mobile-nav-main">
+        <div class="mobile-nav-logo">
+          <img src="resources/img/BDLOGO-white.png" />
+          <a href="index.html"><p>BROCK DALLMAN PHOTOGRAPHY</p></a>
+        </div>
+        <div class="nav-icon-container">
+          <div class="cart-container">
+            <a class="mobile-cart-link" href="cart.html">
+              <ion-icon name="cart"></ion-icon>
+              <div class="mobile-cart-item-count">0</div>
+            </a>
+          </div>
+          <div class="hamburger-menu">
+            <div class="hamburger-stripe"></div>
+            <div class="hamburger-stripe"></div>
+            <div class="hamburger-stripe"></div>
+          </div>
+        </div>
+      </div>
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <section class="contact">
+      <h1 class="contact-title">CONTACT</h1>
+      <p class="contact-email">brock.dallman@gmail.com</p>
+      <!-- https://formspree.io/f/mwkypwln -->
+      <form action="https://formspree.io/f/mwkypwln" method="POST" id="my-form">
+        <div class="name-row">
+          <div class="form-group">
+            <label class="" for="first-name">First Name</label>
+            <input
+              class="form-text"
+              type="text"
+              id="first-name"
+              name="first-name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="" for="last-name">Last Name</label>
+            <input
+              class="form-text"
+              type="text"
+              id="last-name"
+              name="last-name"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="email" for="email">Email Address</label>
+          <input class="form-text" type="email" id="email" name="email" />
+        </div>
+
+        <div class="form-group">
+          <label class="subject" for="subject">Subject</label>
+          <input class="form-text" type="subject" id="subject" name="subject" />
+        </div>
+
+        <div class="form-group">
+          <label class="message" for="message">Message</label>
+          <textarea class="form-text" name="message" id="message"></textarea>
+        </div>
+
+        <button class="submit-button" type="submit">SUBMIT</button>
+      </form>
+      <h3 class="form-status" id="my-form-status">
+        Oops! There was a problem submitting your form
+      </h3>
+    </section>
+
+    <footer>
+      <div class="footer-logo-container">
+        <img class="footer-logo" src="resources/img/BDLOGO-white.png" />
+        <p>BROCK DALLMAN PHOTOGRAPHY <br> 2022 ALL RIGHTS RESERVED</p>
+      </div>
+      <div class="social">
+        <a><img src="resources/img/logo-facebook.svg" /></a>
+        <a><img src="resources/img/logo-instagram (1).svg" /></a>
+        <a><img src="resources/img/logo-reddit.svg" /></a>
+      </div>
+    </footer>
+
+    <script src="" async defer></script>
+  </body>
+</html>

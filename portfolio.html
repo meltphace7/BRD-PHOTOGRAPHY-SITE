@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Brock Dallman Photography/Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="resources/style.css" />
+    <link rel="stylesheet" href="resources/queries.css" />
+    <script src="cartLoad.js" defer></script>
+    <script src="mobile.js" defer></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo-container">
+        <div class="line line-1"></div>
+        <div class="logo">
+          <img src="resources/img/BDLOGO-white.png" />
+          <p>BROCK DALLMAN PHOTOGRAPHY</p>
+        </div>
+        <div class="line line-2"></div>
+      </div>
+      <div class="nav-line">
+        <div class="blank"></div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+            <ul class="dropdown-menu">
+              <li><a href="washington.html">Washington</a></li>
+              <li><a href="oregon.html">Oregon</a></li>
+              <li><a href="california.html">California</a></li>
+              <li><a href="idaho.html">Idaho</a></li>
+              <li><a href="montana.html">Montana</a></li>
+              <li><a href="wyoming.html">Wyoming</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icon-container">
+          <div class="cart-container">
+            <a class="cart-link" href="cart.html">
+              <ion-icon name="cart"></ion-icon>
+              <div class="cart-item-count">0</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-nav">
+      <div class="mobile-nav-main">
+        <div class="mobile-nav-logo">
+          <img src="resources/img/BDLOGO-white.png" />
+          <a href="index.html"><p>BROCK DALLMAN PHOTOGRAPHY</p></a>
+        </div>
+        <div class="nav-icon-container">
+          <div class="cart-container">
+            <a class="mobile-cart-link" href="cart.html">
+              <ion-icon name="cart"></ion-icon>
+              <div class="mobile-cart-item-count">0</div>
+            </a>
+          </div>
+          <div class="hamburger-menu">
+            <div class="hamburger-stripe"></div>
+            <div class="hamburger-stripe"></div>
+            <div class="hamburger-stripe"></div>
+          </div>
+        </div>
+      </div>
+      <ul class="mobile-nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <section class="portfolio">
+      <h1 class="portfolio-title">PORTFOLIO</h1>
+      <div class="portfolio-grid">
+        <a href="washington.html" class="port-grid-item port-grid-item-1">
+          <!-- <img src="resources/img/WA_RAINIER_EAST_SUBLIME_VERT_EDITED.jpg" /> -->
+          <div class="port-grid-img port-grid-img-1"></div>
+          <div class="port-text-container">
+            <h2 class="port-text">WASHINGTON</h2>
+          </div>
+        </a>
+        <a href="oregon.html" class="port-grid-item port-grid-item-2">
+          <!-- <img src="resources/img/OR_EAGLECAP_VERT_EDITED.jpg" /> -->
+          <div class="port-grid-img port-grid-img-2"></div>
+          <div class="port-text-container">
+            <h2 class="port-text">OREGON</h2>
+          </div>
+        </a>
+        <a href="california.html" class="port-grid-item port-grid-item-3">
+          <!-- <img
+            src="resources/img-lowRes/CA_CHICKENFOOT_LAKE_777KB_lowRes.jpg"
+          /> -->
+          <div class="port-grid-img port-grid-img-3"></div>
+          <div class="port-text-container">
+            <h2 class="port-text">CALIFORNIA</h2>
+          </div>
+        </a>
+        <a href="idaho.html" class="port-grid-item port-grid-item-4">
+          <!-- <img src="resources/img-lowRes/ID_McGowanPeak_medRes.jpg" /> -->
+          <div class="port-grid-img port-grid-img-4"></div>
+          <div class="port-text-container">
+            <h2 class="port-text">IDAHO</h2>
+          </div>
+        </a>
+        <a href="wyoming.html" class="port-grid-item port-grid-item-5">
+          <!-- <img src="resources/img/WY_ISLANDLAKE_EVENING_VERT1_GRIDEDITED.jpg" /> -->
+          <div class="port-grid-img port-grid-img-5"></div>
+          <div class="port-text-container">
+            <h2 class="port-text">WYOMING</h2>
+          </div>
+        </a>
+        <a href="montana.html" class="port-grid-item port-grid-item-6">
+          <!-- <img src="resources/img/MONT_GLA_PARK_MONEYSHOT_VERT_EDITED.jpg" /> -->
+          <div class="port-grid-img port-grid-img-6"></div>
+          <div class="port-text-container">
+            <h2 class="port-text">MONTANA</h2>
+          </div>
+        </a>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-logo-container">
+        <img class="footer-logo" src="resources/img/BDLOGO-white.png" />
+        <p>BROCK DALLMAN PHOTOGRAPHY 2022 <br> ALL RIGHTS RESERVED</p>
+      </div>
+      <div class="social">
+        <a><img src="resources/img/logo-facebook.svg" /></a>
+        <a><img src="resources/img/logo-instagram (1).svg" /></a>
+        <a><img src="resources/img/logo-reddit.svg" /></a>
+      </div>
+    </footer>
+
+    <script src="" async defer></script>
+  </body>
+</html>
