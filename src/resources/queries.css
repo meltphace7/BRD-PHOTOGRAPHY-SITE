@@ -133,6 +133,10 @@
     display: flex;
   }
 
+  .dot-container {
+    display: none;
+  }
+
   /* ________INDEX.HTML NEW-ARRIVALS_________________ */
 
   .new-arrivals {
@@ -324,7 +328,7 @@
   }
 
   .bio-image {
-    width: 28rem;
+    width: 23rem;
     height: auto;
   }
 
