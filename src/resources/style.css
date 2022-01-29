@@ -1692,7 +1692,8 @@ header {
 }
 
 .print-grid-item {
-  width: 20rem;
+  /* width: 20rem; */
+  width: 85%;
   height: 25rem;
   padding: 2rem;
   background-color: rgb(63, 63, 63);
@@ -1821,7 +1822,7 @@ header {
 }
 
 .cart-item-image {
-  width: 12rem;
+  width: 10rem;
   border: 8px solid white;
 }
 

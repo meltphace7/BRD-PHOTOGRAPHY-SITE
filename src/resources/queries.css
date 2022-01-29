@@ -29,7 +29,7 @@
 }
 
 /* 1000 px or less */
-@media (max-width: 60em) {
+@media (max-width: 55em) {
   .header {
     height: auto;
   }
@@ -91,7 +91,7 @@
 }
 
 /* small phone 736px or less*/
-@media (max-width: 46em) {
+@media (max-width: 52em) {
   /* ________INDEX.HTML NAV_________________ */
 
   nav {
@@ -335,7 +335,7 @@
   /*__________ SHOP.HTML PHONE________________*/
 
   .print-grid {
-    width: 85%;
+    width: 70%;
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -344,8 +344,17 @@
   }
 
   .print-grid-item {
-    width: 85%;
+    width: 70%;
   }
+
+  .print-grid-item img {
+    width: 17rem;
+    height: auto;
+  }
+
+  /* .print-grid-image {
+    width: 35%;
+  } */
 
   /*__________ CART.HTML PHONE________________*/
 

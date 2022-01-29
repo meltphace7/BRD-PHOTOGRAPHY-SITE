@@ -22,28 +22,28 @@ const products = [
     name: "Ediza Lake",
     price: 1500,
     stock: 5,
-    image: "resources/img/CA-EDIZALakePano-310KB_lowRes.jpg",
+    image: "resources/img/CA_EDIZA-LAKE_PANO_tiny.jpg",
   },
   {
     id: 1,
     name: "Thousand Island Lake",
     price: 1700,
     stock: 5,
-    image: "resources/img/CA-ThousandIsland-Lake-671KB_lowRes.jpg",
+    image: "resources/img/CA_THOUSAND-ISLAND-LAKE_PANO_tiny.jpg",
   },
   {
     id: 2,
     name: "Iceberg Lake",
     price: 1200,
     stock: 5,
-    image: "resources/img/CA-Iceberg-Lake-538KB_lowRes.jpg",
+    image: "resources/img/CA-Iceberg-Lake_tiny.jpg",
   },
   {
     id: 3,
     name: "Lonesome Lake",
     price: 1500,
     stock: 5,
-    image: "resources/img/WY_LONESOME-LAKE_lowRes.jpg",
+    image: "resources/img/WY_LONESOME-LAKE_tiny.jpg",
   },
   {
     id: 4,
@@ -83,7 +83,7 @@ const renderShopItems = function () {
       "beforeend",
       `
       <div class="print-grid-item">
-      <img src="${product.image}" />
+      <img class="print-item-image" src="${product.image}" />
       <div class="print-text-box print-text-box-1">
         <div class="ptb-1">${product.name}</div>
         <div class="ptb-2">Limited Edition</div>
