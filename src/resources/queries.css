@@ -370,6 +370,123 @@
     }
   }
 
+  /*__________ California.HTML PHONE________________*/
+
+  .ca-grid-item-4 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .ca-grid-item-5 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .ca-grid-item-6 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+
+  .ca-grid-item-7 {
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+
+  .ca-grid-item-8 {
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+
+  .ca-grid-item-9 {
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+
+  .ca-grid-item-10 {
+    grid-row-start: 10;
+    grid-row-end: 11;
+  }
+
+  /*__________ MONTANA.HTML PHONE________________*/
+
+  .mo-grid-item-1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .mo-grid-item-2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .mo-grid-item-3 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .mo-grid-item-4 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .mo-grid-item-5 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .mo-grid-item-6 {
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+
+  .mo-grid-item-7 {
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+
+  .mo-grid-item-8 {
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+
+  .mo-grid-item-9 {
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+
+  .mo-grid-item-10 {
+    grid-row-start: 10;
+    grid-row-end: 11;
+  }
+
+  /*__________ IDAHO.HTML PHONE________________*/
+
+  .id-grid-item-10 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 10;
+    grid-row-end: 11;
+  }
+
+  .id-grid-item-11 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 11;
+    grid-row-end: 12;
+  }
+
   /*__________ ABOUT.HTML PHONE________________*/
 
   .bio-box {
