@@ -157,7 +157,13 @@
     }
 
     .header-slide-2 {
-      background-image: url(img/CA_EDIZA-LAKE_PANO_lowRes.jpg);
+      background-image: url(img/CA_THOUSAND-ISLAND-LAKE_PANO_lowRes.jpg);
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    .header-slide-10 {
+      background-image: url(img/CA_GANNET-LAKE_PANO_lowRes.jpg);
       background-size: cover;
       background-position: 50% 50%;
     }
