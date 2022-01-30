@@ -1898,6 +1898,7 @@ header {
   align-items: center;
   background-image: url(img/WA_RAINER-PINK_lowRes.jpg);
   background-size: cover;
+  background-position: 50% 50%;
 }
 
 .contact h1 {
