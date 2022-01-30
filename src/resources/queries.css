@@ -42,6 +42,17 @@
     width: 100%;
   }
 
+  .cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem;
+  }
+
+  .cart-item {
+    width: 100%;
+  }
+
   .portfolio-grid {
     grid-gap: 1rem;
     grid-template-columns: repeat(13 1fr);
@@ -344,11 +355,12 @@
   }
 
   .print-grid-item {
-    width: 70%;
+    width: 100%;
+    padding: 0rem 0rem 1rem 0rem;
   }
 
   .print-grid-item img {
-    width: 17rem;
+    width: 15rem;
     height: auto;
   }
 
@@ -360,6 +372,13 @@
 
   .cart-total-container {
     width: 100%;
+    justify-content: center;
+  }
+
+  .total-container {
+    margin-right: 0rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .cart-grid {

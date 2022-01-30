@@ -268,7 +268,14 @@ ion-icon {
 }
 
 .mobile-nav-menu li {
-  margin: 0.5rem;
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mobile-nav-menu a {
+  padding: 0.5rem;
 }
 
 @keyframes nvdrop {
@@ -281,10 +288,6 @@ ion-icon {
     height: 6rem;
     opacity: 1;
   }
-}
-
-.mobile-nav-menu a {
-  padding: 1rem;
 }
 
 .mobile-nav--hide {
@@ -1804,8 +1807,8 @@ header {
 .cart-item {
   width: 90%;
   height: 6rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  /* margin-right: 2rem;
+  margin-left: 2rem; */
   padding: 2rem;
   border-radius: 2px;
   background-color: rgb(136, 136, 136);
@@ -2037,7 +2040,7 @@ footer p {
 }
 
 .social {
-  width: 12%;
+  width: 10%;
   margin-right: 3rem;
   display: flex;
   justify-content: space-around;
