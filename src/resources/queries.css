@@ -148,6 +148,20 @@
       display: none;
     }
 
+    /* ________INDEX.HTML HEADER GRID_________________ */
+
+    .header-slide-1 {
+      background-image: url(img/WA_St.HELENS_SUNRISE_lowRes5.jpg);
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    .header-slide-2 {
+      background-image: url(img/CA_EDIZA-LAKE_PANO_lowRes.jpg);
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
     /* ________INDEX.HTML NEW-ARRIVALS_________________ */
 
     .new-arrivals {
