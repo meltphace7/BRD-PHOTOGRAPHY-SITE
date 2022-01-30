@@ -212,6 +212,10 @@
       height: 18rem;
     }
 
+    .pr-image {
+      background-position: 50% 50%;
+    }
+
     /* ________INDEX.HTML GRID_GALLERY_________________ */
 
     .section-4 {
