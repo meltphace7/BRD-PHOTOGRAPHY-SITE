@@ -1676,7 +1676,7 @@ header {
 
 .print-text-box {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1713,7 +1713,7 @@ header {
 .add-to-cart-btn {
   margin-top: 1rem;
   border: 1px solid white;
-  background-color: rgb(72, 70, 70);
+  background-color: black;
   color: white;
   padding: 0.7rem 1.7rem;
 }
@@ -1733,6 +1733,7 @@ header {
 .print-grid-item img {
   width: 20rem;
   height: auto;
+  border: 0.5rem solid white;
 }
 
 /*______________ CART.HTML _______________________________*/

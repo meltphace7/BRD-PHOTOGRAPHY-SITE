@@ -542,6 +542,7 @@
 
   .print-text-box {
     width: 100%;
+    margin-bottom: 1rem;
   }
 
   .print-grid-item {
