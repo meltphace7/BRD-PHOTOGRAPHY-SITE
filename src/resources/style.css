@@ -31,10 +31,12 @@ button {
 /*______________ ICONS _____________________*/
 .arrow-right {
   height: 1.5rem;
+  stroke: black;
 }
 
 .arrow-left {
   height: 1.5rem;
+  stroke: black;
 }
 
 /*______________ NAVIGATION _____________________*/
