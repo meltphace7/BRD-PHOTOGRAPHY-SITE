@@ -511,7 +511,7 @@ header {
 }
 
 .dot--active {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 /* _______ SECTIONS ______________________*/
