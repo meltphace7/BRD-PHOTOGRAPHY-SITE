@@ -1012,7 +1012,7 @@ header {
   width: 98%;
   display: grid;
   grid-template-columns: repeat(13 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 }
 
 .wa-grid-item {
@@ -1146,7 +1146,7 @@ header {
   display: grid;
   grid-template-columns: repeat(13 1fr);
   grid-template-rows: repeat(12 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 }
 
 .or-grid-item {
@@ -1238,7 +1238,7 @@ header {
   display: grid;
   grid-template-columns: repeat(13 1fr);
   grid-template-rows: repeat(12 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 }
 
 .ca-grid-item {
@@ -1329,7 +1329,7 @@ header {
   display: grid;
   grid-template-columns: repeat(13 1fr);
   grid-template-rows: repeat(12 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 }
 .id-grid-item {
   color: white;
@@ -1426,7 +1426,7 @@ header {
   display: grid;
   grid-template-columns: repeat(13 1fr);
   grid-template-rows: repeat(12 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 }
 
 .mo-grid-item {
@@ -1518,7 +1518,7 @@ header {
   display: grid;
   grid-template-columns: repeat(13 1fr);
   grid-template-rows: repeat(12 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 }
 
 .wy-grid-item {
