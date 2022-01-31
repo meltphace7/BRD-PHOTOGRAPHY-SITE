@@ -1,43 +1,36 @@
 "use strict";
 
 const nav = document.querySelector(".nav");
+const mobileNav = document.querySelector(".mobile-nav");
 const header = document.querySelector(".header");
 const navLine = document.querySelector(".nav-line");
-// const mobileNavMenu = document.querySelector(".mobile-nav-menu");
-// const hamburgerMenu = document.querySelector(".hamburger-menu");
-
-/* _______  MOBILE_NAV ______________*/
-
-// const hideMobileNavMenu = function () {
-//   mobileNavMenu.classList.add("mobile-nav--hide");
-// };
-
-// hideMobileNavMenu();
-
-// const showMobileNavMenu = function () {
-//   mobileNavMenu.classList.toggle("mobile-nav--hide");
-// };
-
-// hamburgerMenu.addEventListener("click", showMobileNavMenu);
+const headerSlides = document.querySelectorAll(".header-slide");
+const headerSlider = document.querySelector(".header-slider");
+const dotContainer = document.querySelector(".dot-container");
+const headerSlideNext = document.querySelector(".header-slider-btn-right");
+const headerSlidePrev = document.querySelector(".header-slider-btn-left");
 
 /* _______  STICKY NAV ______________*/
 
-// const addStickyNav = function (entries) {
-//   const [entry] = entries;
+const addStickyNav = function (entries) {
+  const [entry] = entries;
 
-//   if (!entry.isIntersecting) {
-//     nav.classList.add("sticky");
-//   } else {
-//     nav.classList.remove("sticky");
-//   }
-// };
+  if (!entry.isIntersecting) {
+    mobileNav.classList.add("sticky");
+    console.log("dsdsdd");
+  } else {
+    mobileNav.classList.remove("sticky");
+  }
+};
 
-// const headerObserver = new IntersectionObserver(addStickyNav, {
-//   root: null,
-//   threshold: 0,
-// });
+const headerObserver = new IntersectionObserver(addStickyNav, {
+  root: null,
+  threshold: 0,
+});
 
-// headerObserver.observe(header);
+console.log("fuck");
+
+headerObserver.observe(header);
 
 /* _________  SECTION FADE IN ________________*/
 
@@ -80,12 +73,6 @@ allSections.forEach(function (section) {
 //////////////////////////////
 
 /* _______  HEADER AUTO SLIDER ______________*/
-const headerSlides = document.querySelectorAll(".header-slide");
-const headerSlider = document.querySelector(".header-slider");
-const dotContainer = document.querySelector(".dot-container");
-const headerSlideNext = document.querySelector(".header-slider-btn-right");
-const headerSlidePrev = document.querySelector(".header-slider-btn-left");
-
 let curHeaderSlide = 0;
 const maxHeaderSlide = headerSlides.length - 1;
 
@@ -133,7 +120,6 @@ const nextHeaderSlide = function () {
   setHeaderActive();
   goToHeaderSlide(curHeaderSlide);
   activateDot(curHeaderSlide);
-  console.log("next slide");
 };
 
 const prevHeaderSlide = function () {
@@ -145,7 +131,6 @@ const prevHeaderSlide = function () {
   setHeaderActive();
   goToHeaderSlide(curHeaderSlide);
   activateDot(curHeaderSlide);
-  console.log("prev slide");
 };
 
 const rotateSlide = setInterval(nextHeaderSlide, 15000);
@@ -154,7 +139,6 @@ const rotateSlides = function (entries) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) {
-    console.log("STOP SLIDE");
     clearInterval(rotateSlide);
   }
 };
@@ -204,7 +188,6 @@ const fadeIn = function (entries) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) {
-    console.log("DOOOOOO");
     sliderControls.style.opacity = "1";
   }
 };

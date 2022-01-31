@@ -767,26 +767,6 @@ header {
 .gal-grid-item-7 {
   grid-column-start: 1;
   grid-column-end: 13;
-  grid-row-start: 4;
-  grid-row-end: 5;
-  background-image: url(img/WA_RAINIER-EAST-VERT_lowRes.jpg);
-  background-size: cover;
-  background-position: 50% 100%;
-}
-
-.gal-grid-item-8 {
-  grid-column-start: 9;
-  grid-column-end: 13;
-  grid-row-start: 5;
-  grid-row-end: 6;
-  background-image: url(img/WY_FREMONT-PEAK-VERT_lowRes.jpg);
-  background-size: cover;
-  background-position: 50% 100%;
-}
-
-.gal-grid-item-9 {
-  grid-column-start: 1;
-  grid-column-end: 13;
   grid-row-start: 6;
   grid-row-end: 7;
   height: 40rem;
@@ -795,7 +775,7 @@ header {
   background-position: 50% 50%;
 }
 
-.gal-grid-item-10 {
+.gal-grid-item-8 {
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 7;
@@ -806,7 +786,7 @@ header {
   background-position: 50% 50%;
 }
 
-.gal-grid-item-11 {
+.gal-grid-item-9 {
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 8;
@@ -817,7 +797,7 @@ header {
   background-position: 50% 50%;
 }
 
-.gal-grid-item-12 {
+.gal-grid-item-10 {
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 9;
@@ -828,7 +808,7 @@ header {
   background-position: 50% 50%;
 }
 
-.gal-grid-item-13 {
+.gal-grid-item-11 {
   grid-column-start: 6;
   grid-column-end: 13;
   grid-row-start: 9;
@@ -839,7 +819,7 @@ header {
   background-position: 50% 50%;
 }
 
-.gal-grid-item-14 {
+.gal-grid-item-12 {
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 10;
