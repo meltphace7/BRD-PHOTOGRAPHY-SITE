@@ -1,5 +1,5 @@
 /* 1280 px */
-@media (max-width: 80em) {
+@media (max-width: 78em) {
   .line {
     width: 30%;
   }
@@ -15,7 +15,7 @@
   }
 
   .print-grid-item {
-    width: 70%;
+    width: 80%;
   }
 
   .cart-container {
@@ -551,7 +551,7 @@
   }
 
   .print-grid-item img {
-    width: 15rem;
+    width: 14rem;
     height: auto;
   }
 
