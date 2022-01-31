@@ -28,6 +28,15 @@ button {
   font-family: "Barlow", sans-serif, Arial, Helvetica, sans-serif;
 }
 
+/*______________ ICONS _____________________*/
+.arrow-right {
+  height: 1.5rem;
+}
+
+.arrow-left {
+  height: 1.5rem;
+}
+
 /*______________ NAVIGATION _____________________*/
 
 nav {
@@ -457,7 +466,7 @@ header {
 .header-slider-btn {
   height: 2.3rem;
   width: 6rem;
-  border: 1px solid black;
+  border: 1.5px solid black;
   background-color: white;
   transition: 0.3s ease-in-out;
 }
